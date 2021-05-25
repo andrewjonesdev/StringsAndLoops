@@ -78,7 +78,7 @@ namespace StringsAndLoops
             {
                 Console.WriteLine("Our sentences do not share a memory address");
             }
-
+             
 
             // something something
             //bool somethingHappens = true;
