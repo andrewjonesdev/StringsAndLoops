@@ -105,6 +105,40 @@ namespace StringsAndLoops
             {
                 Console.WriteLine(wordsList[i]);
             }
+
+            List<String> horizontal = new List<string>();
+            for (int i = 0; i < wordsList.Count; i++)
+            {
+                horizontal.Add("x");
+            }
+
+            List<List<string>> vertical = new List<List<string>>();
+            for (int i = 0; i < wordsList.Count; i++)
+            {
+                vertical.Add(horizontal);
+            }
+
+            var space = " ";
+            for (int i = 0; i < vertical.Count; i++)
+            {
+                for (int j = 0; j < vertical[i].Count; j++)
+                {
+                    if ((j + 1) < vertical[i].Count)
+                    {
+                        Console.Write(vertical[j][i] + space);
+                    }
+                    else
+                    {
+                        Console.Write(vertical[j][i]);
+                    }
+                }
+
+                if ((i + 1) < vertical.Count)
+                {
+                    Console.WriteLine();
+                }
+            }
+
         }
     }
 }
